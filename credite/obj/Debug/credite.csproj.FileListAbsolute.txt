@@ -1,0 +1,11 @@
+C:\Users\Victor\source\repos\credite\credite\bin\Debug\credite.exe.config
+C:\Users\Victor\source\repos\credite\credite\bin\Debug\credite.exe
+C:\Users\Victor\source\repos\credite\credite\bin\Debug\credite.pdb
+C:\Users\Victor\source\repos\credite\credite\obj\Debug\credite.csproj.AssemblyReference.cache
+C:\Users\Victor\source\repos\credite\credite\obj\Debug\credite.csproj.SuggestedBindingRedirects.cache
+C:\Users\Victor\source\repos\credite\credite\obj\Debug\credite.csproj.CoreCompileInputs.cache
+C:\Users\Victor\source\repos\credite\credite\obj\Debug\credite.exe
+C:\Users\Victor\source\repos\credite\credite\obj\Debug\credite.pdb
+C:\Users\Victor\source\repos\credite\credite\obj\Debug\credite.csproj.GenerateResource.cache
+C:\Users\Victor\source\repos\credite\credite\obj\Debug\credite.FrmCredite.resources
+C:\Users\Victor\source\repos\credite\credite\obj\Debug\credite.FrmMeniu.resources
