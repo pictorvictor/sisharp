@@ -35,19 +35,45 @@
             this.button1 = new System.Windows.Forms.Button();
             this.lblAfisare = new System.Windows.Forms.Label();
             this.tbDur = new System.Windows.Forms.TextBox();
+            this.creditBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbDob = new System.Windows.Forms.TextBox();
             this.tbVal = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.creditBindingSource = new System.Windows.Forms.BindingSource(this.components);
             durataLabel = new System.Windows.Forms.Label();
             rataDobandaLabel = new System.Windows.Forms.Label();
             valoareLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.creditBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
+            // durataLabel
+            // 
+            durataLabel.AutoSize = true;
+            durataLabel.Location = new System.Drawing.Point(146, 152);
+            durataLabel.Name = "durataLabel";
+            durataLabel.Size = new System.Drawing.Size(40, 13);
+            durataLabel.TabIndex = 9;
+            durataLabel.Text = "durata:";
+            // 
+            // rataDobandaLabel
+            // 
+            rataDobandaLabel.AutoSize = true;
+            rataDobandaLabel.Location = new System.Drawing.Point(141, 178);
+            rataDobandaLabel.Name = "rataDobandaLabel";
+            rataDobandaLabel.Size = new System.Drawing.Size(75, 13);
+            rataDobandaLabel.TabIndex = 11;
+            rataDobandaLabel.Text = "rata Dobanda:";
+            // 
+            // valoareLabel
+            // 
+            valoareLabel.AutoSize = true;
+            valoareLabel.Location = new System.Drawing.Point(141, 204);
+            valoareLabel.Name = "valoareLabel";
+            valoareLabel.Size = new System.Drawing.Size(45, 13);
+            valoareLabel.TabIndex = 13;
+            valoareLabel.Text = "valoare:";
+            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(317, 259);
+            this.button1.Location = new System.Drawing.Point(149, 256);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(190, 50);
             this.button1.TabIndex = 3;
@@ -63,15 +89,6 @@
             this.lblAfisare.Size = new System.Drawing.Size(361, 63);
             this.lblAfisare.TabIndex = 7;
             // 
-            // durataLabel
-            // 
-            durataLabel.AutoSize = true;
-            durataLabel.Location = new System.Drawing.Point(146, 152);
-            durataLabel.Name = "durataLabel";
-            durataLabel.Size = new System.Drawing.Size(40, 13);
-            durataLabel.TabIndex = 9;
-            durataLabel.Text = "durata:";
-            // 
             // tbDur
             // 
             this.tbDur.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.creditBindingSource, "durata", true));
@@ -80,14 +97,9 @@
             this.tbDur.Size = new System.Drawing.Size(100, 20);
             this.tbDur.TabIndex = 10;
             // 
-            // rataDobandaLabel
+            // creditBindingSource
             // 
-            rataDobandaLabel.AutoSize = true;
-            rataDobandaLabel.Location = new System.Drawing.Point(141, 178);
-            rataDobandaLabel.Name = "rataDobandaLabel";
-            rataDobandaLabel.Size = new System.Drawing.Size(75, 13);
-            rataDobandaLabel.TabIndex = 11;
-            rataDobandaLabel.Text = "rata Dobanda:";
+            this.creditBindingSource.DataSource = typeof(credite.Credit);
             // 
             // tbDob
             // 
@@ -97,15 +109,6 @@
             this.tbDob.Size = new System.Drawing.Size(100, 20);
             this.tbDob.TabIndex = 12;
             // 
-            // valoareLabel
-            // 
-            valoareLabel.AutoSize = true;
-            valoareLabel.Location = new System.Drawing.Point(141, 204);
-            valoareLabel.Name = "valoareLabel";
-            valoareLabel.Size = new System.Drawing.Size(45, 13);
-            valoareLabel.TabIndex = 13;
-            valoareLabel.Text = "valoare:";
-            // 
             // tbVal
             // 
             this.tbVal.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.creditBindingSource, "valoare", true));
@@ -114,26 +117,11 @@
             this.tbVal.Size = new System.Drawing.Size(100, 20);
             this.tbVal.TabIndex = 14;
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(121, 259);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(173, 50);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Creeaza Credit";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // creditBindingSource
-            // 
-            this.creditBindingSource.DataSource = typeof(credite.Credit);
-            // 
             // FrmCredite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
             this.Controls.Add(durataLabel);
             this.Controls.Add(this.tbDur);
             this.Controls.Add(rataDobandaLabel);
@@ -158,6 +146,5 @@
         private System.Windows.Forms.BindingSource creditBindingSource;
         private System.Windows.Forms.TextBox tbDob;
         private System.Windows.Forms.TextBox tbVal;
-        private System.Windows.Forms.Button button2;
     }
 }

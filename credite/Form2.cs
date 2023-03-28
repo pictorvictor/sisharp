@@ -44,13 +44,10 @@ namespace credite
                     lblAfisare.BackColor = Color.Lime;
                     FrmMeniu meniu = (FrmMeniu)this.Owner;
                     meniu.AduCreditu(credit);
+
+                    creditBindingSource.DataSource = new Credit();
                 }
             }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            creditBindingSource.DataSource = new Credit();
         }
     }
 }
