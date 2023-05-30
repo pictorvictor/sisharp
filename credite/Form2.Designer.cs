@@ -38,6 +38,7 @@
             this.creditBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbDob = new System.Windows.Forms.TextBox();
             this.tbVal = new System.Windows.Forms.TextBox();
+            this.ucTimer1 = new credite.ucTimer();
             durataLabel = new System.Windows.Forms.Label();
             rataDobandaLabel = new System.Windows.Forms.Label();
             valoareLabel = new System.Windows.Forms.Label();
@@ -117,11 +118,19 @@
             this.tbVal.Size = new System.Drawing.Size(100, 20);
             this.tbVal.TabIndex = 14;
             // 
+            // ucTimer1
+            // 
+            this.ucTimer1.Location = new System.Drawing.Point(537, 12);
+            this.ucTimer1.Name = "ucTimer1";
+            this.ucTimer1.Size = new System.Drawing.Size(150, 107);
+            this.ucTimer1.TabIndex = 15;
+            // 
             // FrmCredite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ucTimer1);
             this.Controls.Add(durataLabel);
             this.Controls.Add(this.tbDur);
             this.Controls.Add(rataDobandaLabel);
@@ -146,5 +155,6 @@
         private System.Windows.Forms.BindingSource creditBindingSource;
         private System.Windows.Forms.TextBox tbDob;
         private System.Windows.Forms.TextBox tbVal;
+        private ucTimer ucTimer1;
     }
 }

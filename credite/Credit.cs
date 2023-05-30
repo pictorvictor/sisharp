@@ -17,14 +17,16 @@ namespace credite
         [Range(1, 30, ErrorMessage = "Durata creditului trebuie sa fie intre 1 si 30 ani")]
         public int durata { get; set; }
         [Required(ErrorMessage = "Introdu valoarea")]
-        [Range(100, 100000, ErrorMessage = "Valoarea creditului trebuie sa fie intre 100 si 100000 lei")]
+        [Range(10000, 100000, ErrorMessage = "Valoarea creditului trebuie sa fie intre 10000 si 100000 lei")]
         public int valoare { get; set; }
+        public int creditId { get; set; }
 
         public Credit()
         {
             this.valoare = 0;
             this.durata = 0;
             this.rataDobanda = 0;
+            this.creditId = 0;
         }
 
         public Credit(int rataDobanda, int durata, int valoare)
@@ -36,7 +38,7 @@ namespace credite
 
         public override string ToString()
         {
-            return "credit in valoare de " + valoare +" cu rata de " + rataDobanda + "% si este pe o durata de " + durata + " ani.";
+            return "credit in valoare de " + valoare +" cu rata de " + rataDobanda + "%, pe o durata de " + durata + " ani.";
         }
 
 

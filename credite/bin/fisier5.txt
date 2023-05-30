@@ -1,0 +1,4 @@
+Clientul cu CNP 5021101410025 are un credit in valoare de 1000 cu rata de 15%, pe o durata de 15 ani.
+Clientul cu CNP 1234123412345 are un credit in valoare de 100000 cu rata de 25%, pe o durata de 25 ani.
+Clientul cu CNP 5012312345678 are un credit in valoare de 3333 cu rata de 23%, pe o durata de 30 ani.
+

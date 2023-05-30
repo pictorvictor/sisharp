@@ -45,9 +45,9 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.salveazaInFisierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.restaurareDinFisierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deserializeazaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.serializeazaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PrintButton = new System.Windows.Forms.Button();
             this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ucTimer1 = new credite.ucTimer();
             cnpLabel = new System.Windows.Forms.Label();
             emailLabel = new System.Windows.Forms.Label();
             numeLabel = new System.Windows.Forms.Label();
@@ -56,9 +56,45 @@
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
+            // cnpLabel
+            // 
+            cnpLabel.AutoSize = true;
+            cnpLabel.Location = new System.Drawing.Point(21, 113);
+            cnpLabel.Name = "cnpLabel";
+            cnpLabel.Size = new System.Drawing.Size(28, 13);
+            cnpLabel.TabIndex = 2;
+            cnpLabel.Text = "cnp:";
+            // 
+            // emailLabel
+            // 
+            emailLabel.AutoSize = true;
+            emailLabel.Location = new System.Drawing.Point(21, 139);
+            emailLabel.Name = "emailLabel";
+            emailLabel.Size = new System.Drawing.Size(34, 13);
+            emailLabel.TabIndex = 4;
+            emailLabel.Text = "email:";
+            // 
+            // numeLabel
+            // 
+            numeLabel.AutoSize = true;
+            numeLabel.Location = new System.Drawing.Point(21, 165);
+            numeLabel.Name = "numeLabel";
+            numeLabel.Size = new System.Drawing.Size(36, 13);
+            numeLabel.TabIndex = 6;
+            numeLabel.Text = "nume:";
+            // 
+            // prenumeLabel
+            // 
+            prenumeLabel.AutoSize = true;
+            prenumeLabel.Location = new System.Drawing.Point(21, 191);
+            prenumeLabel.Name = "prenumeLabel";
+            prenumeLabel.Size = new System.Drawing.Size(51, 13);
+            prenumeLabel.TabIndex = 8;
+            prenumeLabel.Text = "prenume:";
+            // 
             // btAd
             // 
-            this.btAd.Location = new System.Drawing.Point(419, 309);
+            this.btAd.Location = new System.Drawing.Point(250, 309);
             this.btAd.Name = "btAd";
             this.btAd.Size = new System.Drawing.Size(168, 48);
             this.btAd.TabIndex = 0;
@@ -66,86 +102,50 @@
             this.btAd.UseVisualStyleBackColor = true;
             this.btAd.Click += new System.EventHandler(this.button1_Click);
             // 
-            // cnpLabel
-            // 
-            cnpLabel.AutoSize = true;
-            cnpLabel.Location = new System.Drawing.Point(119, 118);
-            cnpLabel.Name = "cnpLabel";
-            cnpLabel.Size = new System.Drawing.Size(28, 13);
-            cnpLabel.TabIndex = 2;
-            cnpLabel.Text = "cnp:";
-            // 
             // tbCnp
             // 
             this.tbCnp.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientBindingSource, "cnp", true));
-            this.tbCnp.Location = new System.Drawing.Point(176, 115);
+            this.tbCnp.Location = new System.Drawing.Point(78, 110);
             this.tbCnp.Name = "tbCnp";
-            this.tbCnp.Size = new System.Drawing.Size(211, 20);
+            this.tbCnp.Size = new System.Drawing.Size(219, 20);
             this.tbCnp.TabIndex = 3;
-            // 
-            // emailLabel
-            // 
-            emailLabel.AutoSize = true;
-            emailLabel.Location = new System.Drawing.Point(119, 144);
-            emailLabel.Name = "emailLabel";
-            emailLabel.Size = new System.Drawing.Size(34, 13);
-            emailLabel.TabIndex = 4;
-            emailLabel.Text = "email:";
             // 
             // tbEmail
             // 
             this.tbEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientBindingSource, "email", true));
-            this.tbEmail.Location = new System.Drawing.Point(176, 141);
+            this.tbEmail.Location = new System.Drawing.Point(78, 136);
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(211, 20);
+            this.tbEmail.Size = new System.Drawing.Size(219, 20);
             this.tbEmail.TabIndex = 5;
-            // 
-            // numeLabel
-            // 
-            numeLabel.AutoSize = true;
-            numeLabel.Location = new System.Drawing.Point(119, 170);
-            numeLabel.Name = "numeLabel";
-            numeLabel.Size = new System.Drawing.Size(36, 13);
-            numeLabel.TabIndex = 6;
-            numeLabel.Text = "nume:";
             // 
             // tbNume
             // 
             this.tbNume.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientBindingSource, "nume", true));
-            this.tbNume.Location = new System.Drawing.Point(176, 167);
+            this.tbNume.Location = new System.Drawing.Point(78, 162);
             this.tbNume.Name = "tbNume";
-            this.tbNume.Size = new System.Drawing.Size(211, 20);
+            this.tbNume.Size = new System.Drawing.Size(219, 20);
             this.tbNume.TabIndex = 7;
-            // 
-            // prenumeLabel
-            // 
-            prenumeLabel.AutoSize = true;
-            prenumeLabel.Location = new System.Drawing.Point(119, 196);
-            prenumeLabel.Name = "prenumeLabel";
-            prenumeLabel.Size = new System.Drawing.Size(51, 13);
-            prenumeLabel.TabIndex = 8;
-            prenumeLabel.Text = "prenume:";
             // 
             // tbPrenume
             // 
             this.tbPrenume.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientBindingSource, "prenume", true));
-            this.tbPrenume.Location = new System.Drawing.Point(176, 193);
+            this.tbPrenume.Location = new System.Drawing.Point(78, 188);
             this.tbPrenume.Name = "tbPrenume";
-            this.tbPrenume.Size = new System.Drawing.Size(211, 20);
+            this.tbPrenume.Size = new System.Drawing.Size(219, 20);
             this.tbPrenume.TabIndex = 9;
             // 
             // cbCred
             // 
             this.cbCred.FormattingEnabled = true;
-            this.cbCred.Location = new System.Drawing.Point(176, 227);
+            this.cbCred.Location = new System.Drawing.Point(78, 222);
             this.cbCred.Name = "cbCred";
-            this.cbCred.Size = new System.Drawing.Size(211, 21);
+            this.cbCred.Size = new System.Drawing.Size(260, 21);
             this.cbCred.TabIndex = 10;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(119, 230);
+            this.label1.Location = new System.Drawing.Point(21, 225);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 13);
             this.label1.TabIndex = 11;
@@ -153,7 +153,7 @@
             // 
             // btAdaugaClient
             // 
-            this.btAdaugaClient.Location = new System.Drawing.Point(176, 309);
+            this.btAdaugaClient.Location = new System.Drawing.Point(40, 309);
             this.btAdaugaClient.Name = "btAdaugaClient";
             this.btAdaugaClient.Size = new System.Drawing.Size(152, 48);
             this.btAdaugaClient.TabIndex = 12;
@@ -165,52 +165,54 @@
             // 
             this.lista.BackColor = System.Drawing.SystemColors.Control;
             this.lista.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lista.Location = new System.Drawing.Point(432, 113);
+            this.lista.Location = new System.Drawing.Point(344, 87);
             this.lista.Name = "lista";
-            this.lista.Size = new System.Drawing.Size(290, 130);
+            this.lista.Size = new System.Drawing.Size(444, 203);
             this.lista.TabIndex = 13;
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.salveazaInFisierToolStripMenuItem,
-            this.restaurareDinFisierToolStripMenuItem,
-            this.deserializeazaToolStripMenuItem,
-            this.serializeazaToolStripMenuItem});
+            this.restaurareDinFisierToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(178, 92);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(200, 48);
             // 
             // salveazaInFisierToolStripMenuItem
             // 
             this.salveazaInFisierToolStripMenuItem.Name = "salveazaInFisierToolStripMenuItem";
-            this.salveazaInFisierToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.salveazaInFisierToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.salveazaInFisierToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.salveazaInFisierToolStripMenuItem.Text = "Salveaza in fisier";
             this.salveazaInFisierToolStripMenuItem.Click += new System.EventHandler(this.salveazaInFisierToolStripMenuItem_Click);
             // 
             // restaurareDinFisierToolStripMenuItem
             // 
             this.restaurareDinFisierToolStripMenuItem.Name = "restaurareDinFisierToolStripMenuItem";
-            this.restaurareDinFisierToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.restaurareDinFisierToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.restaurareDinFisierToolStripMenuItem.Text = "Restaurare din fisier";
             this.restaurareDinFisierToolStripMenuItem.Click += new System.EventHandler(this.restaurareDinFisierToolStripMenuItem_Click);
             // 
-            // deserializeazaToolStripMenuItem
+            // PrintButton
             // 
-            this.deserializeazaToolStripMenuItem.Name = "deserializeazaToolStripMenuItem";
-            this.deserializeazaToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.deserializeazaToolStripMenuItem.Text = "Deserializeaza";
-            this.deserializeazaToolStripMenuItem.Click += new System.EventHandler(this.deserializeazaToolStripMenuItem_Click);
-            // 
-            // serializeazaToolStripMenuItem
-            // 
-            this.serializeazaToolStripMenuItem.Name = "serializeazaToolStripMenuItem";
-            this.serializeazaToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.serializeazaToolStripMenuItem.Text = "Serializeaza";
-            this.serializeazaToolStripMenuItem.Click += new System.EventHandler(this.serializeazaToolStripMenuItem_Click);
+            this.PrintButton.Location = new System.Drawing.Point(509, 309);
+            this.PrintButton.Name = "PrintButton";
+            this.PrintButton.Size = new System.Drawing.Size(75, 23);
+            this.PrintButton.TabIndex = 14;
+            this.PrintButton.Text = "Imprima";
+            this.PrintButton.UseVisualStyleBackColor = true;
+            this.PrintButton.Click += new System.EventHandler(this.PrintButton_Click);
             // 
             // clientBindingSource
             // 
             this.clientBindingSource.DataSource = typeof(credite.Client);
+            // 
+            // ucTimer1
+            // 
+            this.ucTimer1.Location = new System.Drawing.Point(612, 346);
+            this.ucTimer1.Name = "ucTimer1";
+            this.ucTimer1.Size = new System.Drawing.Size(176, 92);
+            this.ucTimer1.TabIndex = 15;
             // 
             // FrmMeniu
             // 
@@ -218,6 +220,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ContextMenuStrip = this.contextMenuStrip1;
+            this.Controls.Add(this.ucTimer1);
+            this.Controls.Add(this.PrintButton);
             this.Controls.Add(this.lista);
             this.Controls.Add(this.btAdaugaClient);
             this.Controls.Add(this.label1);
@@ -234,6 +238,7 @@
             this.Name = "FrmMeniu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Meniu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMeniu_FormClosing);
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -256,7 +261,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem salveazaInFisierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem restaurareDinFisierToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deserializeazaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem serializeazaToolStripMenuItem;
+        private System.Windows.Forms.Button PrintButton;
+        private ucTimer ucTimer1;
     }
 }
